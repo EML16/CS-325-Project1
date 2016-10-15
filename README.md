@@ -22,6 +22,18 @@ Contents of the files thus far, Please alter as you add.
 			formatted as [a, b, c, d, ...]
 		- For each input array a result is written in the file 'MSS_Results.txt'.
 		- Make sure to rename/copy 'MSS_Results.txt' before rerunning this program.
+    alg3.hpp:
+        - Header file that contains declarations of the algorithm and helper function
+    alg3.cpp
+        - Contains implementation of algorithm 3
+    maxSubArrayTester.cpp
+        - Reads input from file ('MSS_problems.txt')
+        - Converts the input and inserts into correct position in 2D vector
+        - Converts each vector inside 2D vector to an array and runs algorithm with it
+        - Writes results of algorithm run to results.txt file
+        - Also contains a function that runs the algorithm 10 times with randomly generated input of 
+            size n and calculates the average. Used for experimental analysis
+    
 
 Compiling Instructions:
 	The programs utilize some c++11 constructs; hence, they have to be compiled with the flag '-std=c++11'
@@ -48,3 +60,5 @@ Running runtime calculator
 			<size_increment>:		The difference in the number of elements between two successive arrays
 			<logfile>:	A file where each line contains an array size and average running time in milliseconds
 
+Compiling alg3.hpp, alg3.cpp and maxSubArrayTester.cpp
+    $ g++ alg3.cpp alg3.hpp maxSubArrayTester.cpp -o max
