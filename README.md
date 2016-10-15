@@ -6,7 +6,7 @@ Contents of the files thus far, Please alter as you add.
 	Algo.h:		
 		Header file that contains the declarations of the two functions
 
-	Algo.cpp: 	
+	algo1adn2.cpp: 	
 		Contains implementation of the two algorithms
 
 	calculateRunTime.cpp
