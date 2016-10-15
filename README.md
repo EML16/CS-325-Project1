@@ -6,7 +6,7 @@ Contents of the files thus far, Please alter as you add.
 	Algo.h:		
 		Header file that contains the declarations of the two functions
 
-	algo1adn2.cpp: 	
+	algo1and2.cpp: 	
 		Contains implementation of the two algorithms
 
 	calculateRunTime.cpp
@@ -27,16 +27,16 @@ Compiling Instructions:
 	The programs utilize some c++11 constructs; hence, they have to be compiled with the flag '-std=c++11'
 
 Compiling the main program
-	$ g++ -std=c++11 -c Algo.cpp -o Algo.o
+	$ g++ -std=c++11 -c algo1and2.cpp -o algo1and2.o
 	$ g++ -std=c++11 -c main.cpp -o main.o
-	$ g++ Algo.o main.o -o exeMain
+	$ g++ algo1and2.o main.o -o exeMain
 
 Running the main program
 	$ exeMain <algo_no>
 		where <algo_no> is the algorithm identifier, 1:Enumeration, 2:ImprovedEnumeration
 
 Compiling for the program to calculate the running times
-	$ g++ -std=c++11 -c Algo.cpp -o Algo.o
+	$ g++ -std=c++11 -c algo1and2.cpp -o algo1and2.o
 	$ g++ -std=c++11 -c calculateRunTime.cpp -o calculateRunTime.o
 	$ g++ calculateRunTime.o Algo.o -o exeCalculateRunTime
 
