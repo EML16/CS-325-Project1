@@ -7,7 +7,7 @@ Contents of the files thus far, Please alter as you add.
 		Header file that contains the declarations of the two functions
 
 	algo1and2.cpp: 	
-		Contains implementation of the two algorithms
+		Contains implementation of algorithm 1 and 2 for project 1. 
 
 	calculateRunTime.cpp
 		- The program used to calculate the average running time of the algorithms.
