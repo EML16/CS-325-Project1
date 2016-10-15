@@ -38,27 +38,29 @@ int main(int argc, char* argv[]) {
 	//Read from the input file, apply the algorithm on each line, and write results in the output file	
 	string line;
 	while(getline(inputFile, line)){		
-		int num;
-		vector<int>row;
-		stringstream ss(line);
-		ss.ignore(1, '[');	//skip the open bracket
-		while(ss>>num){
-			row.push_back(num);
-			ss.ignore(1, ','); //skip the comma
-		}
-	
-		//Run the algorithm
-		f(row, startIdx, endIdx, maxSum);
+		if(line.size() > 1){
+			int num;
+			vector<int>row;
+			stringstream ss(line);
+			ss.ignore(1, '[');	//skip the open bracket
+			while(ss>>num){
+				row.push_back(num);
+				ss.ignore(1, ','); //skip the comma
+			}
 		
-		outputFile<<line<<endl;		//Write the original array
-		outputFile<<"[";	//Begin the maximum subarray list by [
+			//Run the algorithm
+			f(row, startIdx, endIdx, maxSum);
+			
+			outputFile<<line<<endl;		//Write the original array
+			outputFile<<"[";	//Begin the maximum subarray list by [
 
-		//Write the maximum subarray
-		copy(row.begin() + startIdx, row.begin() + endIdx + 1, ostream_iterator<int>(outputFile, ","));			
-		outputFile.seekp(-1, ios::cur);	//Overwrite the trail comma
-		outputFile<<"]\n";	//Append the maxium subarray list by ]
+			//Write the maximum subarray
+			copy(row.begin() + startIdx, row.begin() + endIdx + 1, ostream_iterator<int>(outputFile, ","));			
+			outputFile.seekp(-1, ios::cur);	//Overwrite the trail comma
+			outputFile<<"]\n";	//Append the maxium subarray list by ]
 
-		outputFile<<maxSum<<endl<<endl;	//Write the sum of the maximum subarray list
+			outputFile<<maxSum<<endl<<endl;	//Write the sum of the maximum subarray list
+		}
 	}
 	return 0;
 }
