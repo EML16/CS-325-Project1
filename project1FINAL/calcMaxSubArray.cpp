@@ -74,15 +74,15 @@ int main()
         maxSubArrayEnumeration(*iter, result.start, result.end, result.sum);
         writeToFile(input, result.start, result.end, size, result.sum, &outputFile, "Enumeration"); //Write results to file
        
-        //Calculate max subarray using Enumeration algorithm
+        //Calculate max subarray using Better Enumeration algorithm
         maxSubArrayImprovedEnumeration(*iter, result.start, result.end, result.sum);
         writeToFile(input, result.start, result.end, size, result.sum, &outputFile, "Better Enumeration"); //Write results to file
         
-        //Calculate max subarray using Enumeration algorithm
+        //Calculate max subarray using Divide & Conquer algorithm
         result = maxSubArrayDivideConquer(input, 0, size - 1);
         writeToFile(input, result.start, result.end, size, result.sum, &outputFile, "Divide & Conquer"); //Write results to file
         
-        //Calculate max subarray using Enumeration algorithm
+        //Calculate max subarray using Linear-Time algorithm
         maxSubArrayLinearTime(input, size, result.start, result.end, result.sum);
         writeToFile(input, result.start, result.end, size, result.sum, &outputFile, "Linear-Time"); //Write results to file
         outputFile << "--------------------------------------" << endl <<endl;
