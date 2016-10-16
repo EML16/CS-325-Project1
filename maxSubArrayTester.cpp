@@ -33,7 +33,7 @@ void tester(int inputSize);
 
 int main()
 {
-    /*
+    
     ifstream inputFile;
     inputFile.open("./MSS_TestProblems-1.txt");
     if (!inputFile) //check if the file opened successfully
@@ -75,7 +75,7 @@ int main()
         delete[] input;
     }
     outputFile.close();
-    */
+    
     srand ((int)time(NULL));
     tester(100000); //Run algorithm with given input size and print the average running time
     
