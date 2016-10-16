@@ -14,9 +14,17 @@ Files included:
 		- Reads in data from "MSS_Problems.txt" and converts it into
 		  a 2D vector with each vector inside representing an array from the input 
 		  file. The input is then used to run each of the four max subarray
-		  algortihms and the results from each algorithm run is written to
+		  algorithms and the results from each algorithm run is written to
 		  "MSS_Results.txt"
 	-MSS_Problems.txt
+		- Input used to run max subarray algorithms
+	-MSS_Results.txt
+		- Contains results of the algorithm
+		- Format:
+			<Algorithm used>
+			[Test case]
+			[maximum subarray]
+			<max sum>
 
 Compiling instructions:
 	-Command to compile the program:
